@@ -26,7 +26,7 @@ pipeline {
         stage('Install') {
             steps {
                 // package.json에 정의된 모든 npm 패키지 설치
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
@@ -34,7 +34,7 @@ pipeline {
         stage('Test') {
             steps {
                 // npm test 명령어 실행 (package.json의 "test" 스크립트 사용)
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
@@ -55,7 +55,7 @@ pipeline {
 
             steps {
                 // npm start 명령 실행 (보통 서버 시작 또는 빌드 스크립트)
-                sh 'npm start'
+                bat 'npm start'
             }
         }
     }
